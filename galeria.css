@@ -1,0 +1,51 @@
+
+.gallery-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .gallery-container:hover .gallery-item{
+    opacity: .5;
+  }
+  .gallery-container .gallery-item:hover {
+    opacity: 1
+  }
+  
+  .gallery-item{
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+    transition: all .3s;
+  }
+  
+  .gallery-item:hover{
+    transform: translateY(-20px)
+  }
+  
+  .gallery-item img{
+     width: 100%;
+     height: auto;
+  }
+  
+  .texto{
+      font-family: "Oswald", sans-serif;
+      color: rgb(100, 53, 81);
+      
+  }
+  
+  .titulo{
+      font-family: "Oswald", sans-serif;
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgb(100, 53, 81);
+  }
