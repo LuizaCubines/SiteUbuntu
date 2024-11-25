@@ -1,8 +1,30 @@
-/* style.css */
 /* Estilo básico para dropdown */
+header nav {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+}
+
+header nav a, 
+header nav .dropdown {
+    text-align: center;
+}
+
+header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+header nav .dropdown:hover .dropdown-content {
+    display: block;
+}
 
 nav {
-    background-color: #333;
+    background-color: #ffffff;
     overflow: hidden;
 }
 
@@ -39,21 +61,9 @@ nav a:hover,
     background-color: #575757;
 }
 
-/* Conteúdo do dropdown escondido inicialmente */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
-    z-index: 1;
-}
-
 /* Links dentro do conteúdo do dropdown */
 .dropdown-content a {
-    float: none;
     color: #575757;
-    ;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -63,11 +73,7 @@ nav a:hover,
 /* Efeito hover para links no dropdown */
 .dropdown-content a:hover {
     background-color: #000000;
-}
-
-/* Exibe o dropdown quando o mouse está sobre a área */
-.dropdown:hover .dropdown-content {
-    display: block;
+    color: #ffffff;
 }
 
 /* Estilo global */
@@ -101,7 +107,7 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 10px 0;
-    margin: 0; /* Remove margem do ul para consistência */
+    margin: 0;
 }
 
 nav ul li {
@@ -156,10 +162,82 @@ ul li {
 /* Estilo para o rodapé */
 footer {
     background-color: #000000;
-    color: #fff;
+    color: #ffffff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex-basis: 23%; 
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: rgb(231, 140, 56);
+}
+
+.footer-section p, 
+.footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style-type: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #2d6d2b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: rgb(231, 140, 56);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: rgb(231, 140, 56);
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 15px;
-    width: 100%;
-    position: fixed; /* Mantém o rodapé fixo no final da página */
-    bottom: 0;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid rgb(243, 241, 118);
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.links {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
